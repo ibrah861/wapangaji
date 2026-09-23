@@ -1,0 +1,128 @@
+.login-page {
+  background: var(--green-cl-1);
+  color: white;
+  height: 100dvh;
+}
+
+.wrapper-container {
+  height: inherit;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+
+.lg-form {
+  background: var(--white-bg-cl);
+  box-shadow: 0px 1px 4px blue;
+  color: black;
+  width: 22rem;
+  padding: var(--padding-form) 1.5rem;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.lg-form h2 {
+  font-weight: 500;
+}
+
+.input_label {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin-top: 1rem;
+}
+
+.username,
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+.username > input,
+.password > input {
+  padding: 0.8rem 0;
+  margin-top: 0.3rem;
+  box-shadow: 0px 0px 1px black;
+  border: none;
+  border-radius: 0.3rem;
+}
+
+.username > input::placeholder,
+.password > input::placeholder {
+  padding-left: 0.5rem;
+}
+
+.text-discription,
+.messege-of-contact {
+  box-shadow: 0px 0px 1px green;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  margin-top: 0.4rem;
+  color: rgba(0, 0, 0, 0.729);
+  font-size: small;
+}
+
+.text-discription > p {
+  line-height: 1.6rem;
+}
+
+.submit-credential {
+  background: blue;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: 100;
+}
+
+.submit-credential > button {
+  background: transparent;
+  box-shadow: 0px 0px 0px;
+  color: white;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  border: none;
+  padding: 0.8rem 0;
+  cursor: pointer;
+}
+
+.messege-of-contact {
+  line-height: 1.6rem;
+}
+
+.contact-admin {
+  background: white;
+  color: black;
+  width: 22rem;
+  padding: var(--padding-form) 1.5rem;
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+   box-shadow: 0px 1px 4px blue;
+  display: flex;
+  column-gap: 0.8em;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    width: 100%;
+    max-width: 2rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+    margin-top: 0.5em;
+    text-align: center;
+  }
+}
+
+

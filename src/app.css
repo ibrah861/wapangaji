@@ -1,0 +1,59 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  position: relative;
+  width: inherit;
+  width: inherit;
+ 
+}
+
+#root {
+  width: inherit;
+  max-width: inherit;
+  
+}
+
+.wrapper-container {
+  margin: 0 auto;
+  width: 65%;
+  position: relative;
+}
+
+.dashbord {
+  position: relative;
+  width: 80%;
+  margin: 2rem auto 0 17.6rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+@media (width < 450px) {
+  .mobile-view-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0.1rem 0.7em 1rem 0.7em;
+  }
+}
+
+:root {
+  --green-cl-1: white;
+  --green-cl-2: green;
+  --green-cl-3: green;
+  --white-bg-cl: white;
+
+  /* ------UNIT-------- */
+  --padding-form: 2rem;
+  --border-radius: 0.6rem;
+}

@@ -1,0 +1,56 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  ---border-radius : 1rem;
+  --btn-bgcl : rgba(0, 0, 255, 0.981);
+  --btn-cl:white;
+  --margin-top:1rem;
+  --body-bg-cl: white;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  position: relative;
+  width: inherit;
+  max-width: inherit;
+  background: var(--body-bg-cl);
+ }
+
+
+
+/* Tablet */
+/* @media (width > 650px) {
+  body {
+  width: 90%;
+  margin: 0 auto;
+}
+} */
+
+/* Large Screen */
+@media (width > 1000px) {
+  body {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+ }
+
+#root {
+   width: 100%;
+   max-width: 100%;
+   margin: 0 auto;
+}
+}
+
