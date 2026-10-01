@@ -5,10 +5,6 @@
   margin-bottom: 1rem;
   align-items: center;
 
-  h2 {
-    color: mediumslateblue;
-  }
-
   .rounde-image {
     img {
       width: 4rem;
@@ -20,40 +16,48 @@
 
 .tax-payer-details {
   margin: 2rem 0;
-  color: mediumslateblue;
 }
 
 .personal-details {
   display: flex;
   justify-content: space-between;
   column-gap: 1rem;
+  padding: 1rem 2rem;
 }
 
 .col {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  row-gap: 1rem;
   width: 100%;
-  padding: 1.9rem 2rem;
-  box-shadow: 0px 0px 1px black;
-  color: white;
-  background: slateblue;
+  padding: 0.8rem 0.8rem;
+
   border-radius: 5px;
+  box-shadow: 0px 0px 1px;
+  overflow: hidden;
+  box-shadow: 0px 0px 1px;
+  background: #036303c8;
+  color: white;
 }
 
+.data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .data :nth-child(1) {
-  font-weight: 700;
   margin-bottom: 0.8rem;
   font-size: 1.1rem;
+  font-weight: 700;
 }
 
 .data :nth-child(2) {
-  font-weight: 400;
-  color: black;
   letter-spacing: 0.1em;
-  background: rgb(255, 255, 23);
   width: fit-content;
-  padding: 0.1em 0.3em;
+  padding: 0.4em 0.5em;
+  border-radius: 0.2rem;
+  display: inline-block;
+  font-size: 0.9rem;
 }
 
 .loadingContainer {
@@ -72,14 +76,11 @@
   row-gap: 1rem;
 }
 
-
 /* PROFILE CSS */
 
 .bg-color {
-  background: rgba(0, 0, 0, 0.885);
-  padding: 2.8rem 1rem;
   border-radius: 5px;
-  color: white;
+
   margin-top: 2rem;
   position: relative;
   width: 100%;
@@ -104,15 +105,16 @@
 }
 
 .dashbord h2 {
-  margin-bottom: 0.8rem;
+  margin: 1.5rem 0;
 }
 
 .profile-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   margin-top: 1.9rem;
   column-gap: 5rem;
+  padding: 1rem;
 }
 
 .left-col,
@@ -122,10 +124,12 @@
 
 .left-col {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
-
-  column-gap: 1rem;
+  column-gap: 6rem;
+  padding: 2rem;
+  background: green;
+  color: white;
 }
 
 .user-info-col-1,
@@ -139,10 +143,15 @@
   font-weight: 700;
 }
 
+.infor > span,
 .infor :nth-child(2) {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.69);
+  display: block;
+}
+
+.infor :nth-child(2) {
+  font-size: 0.8rem;
 }
 
 .right-col {
@@ -152,9 +161,7 @@
 
   .img-container {
     width: fit-content;
-    box-shadow: 0px 0px 5px hsl(0, 100%, 50%);
-    border-radius: 5px;
-    background: white;
+
     overflow: hidden;
 
     img {
@@ -237,7 +244,7 @@
   .deleting p,
   .suspend p {
     text-align: center;
-    color: rgba(0, 0, 0, 0.692);
+    color: white;
   }
 
   .loaderContainer {
@@ -277,7 +284,8 @@
     flex-direction: column;
     row-gap: 0.2rem;
 
-    input,select {
+    input,
+    select {
       padding: 0.8rem 0.3rem;
       width: 20rem;
       position: relative;
@@ -342,5 +350,51 @@
       background: white;
       color: black;
     }
+  }
+}
+
+
+/* Registration */
+.register  h2{
+ 
+}
+
+
+
+/* at media */
+@media (width < 450px) {
+  .personal-details {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: inherit;
+  }
+
+  .content {
+    padding: 0 0 1rem 0;
+  }
+
+ .data > p, .data > span {
+    font-size: 0.8rem !important;
+
+  }
+
+  .data :nth-child(1){
+    margin: 0;
+  }
+
+  .dashbord {
+   width: 95%;
+  }
+
+  .tax-payer-details {
+    margin: 0.9rem 0;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    color: #008000;
+  }
+
+  .flex h2 {
+    font-size: 1.0rem;
   }
 }

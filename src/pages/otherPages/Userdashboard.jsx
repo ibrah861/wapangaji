@@ -44,7 +44,7 @@ export const Userdashboard = () => {
       <div className="content">
         <div className="dashbord">
           <div className="flex">
-            <h2>Welcome, &nbsp; Ibrahim Amour</h2>
+            <h2>Welcome, &nbsp; {fetchUserData?.firstname} {fetchUserData?.lastname}</h2>
             <div className="rounde-image">
               <img src={image} alt="img" />
             </div>
@@ -66,25 +66,30 @@ export const Userdashboard = () => {
                 <div className="personal-details">
                   <div className="col">
                     <div className="data">
-                      <p>User Name</p>
+                      <p>User name</p>
                       {!fetchUserData.firstname ? (
                         <p>...</p>
                       ) : (
                         <>
-                          <span>{fetchUserData?.firstname}</span>
-                          &nbsp;
-                          <span>{fetchUserData?.lastname}</span>
+                          
+                          <p>
+                            <span>{fetchUserData?.firstname} {fetchUserData?.lastname}</span>
+                            
+                          </p>
                         </>
                       )}
                     </div>
+                    <hr />
                     <div className="data">
-                      <p>Home Address</p>
-                      <p>Masingini "Limpopo"</p>
+                      <p>Home address</p>
+                      <p>Masingini </p>
                     </div>
+                    <hr />
                     <div className="data">
                       <p>Registered date</p>
                       <p>20 / 09 / 2026</p>
                     </div>
+                    <hr />
                     <div className="data">
                       <p>Email address</p>
                       {!fetchUserData.email ? (
@@ -95,6 +100,7 @@ export const Userdashboard = () => {
                         </>
                       )}
                     </div>
+                    <hr />
                     <div className="data">
                       <p>Payment status</p>
                       <p
@@ -108,6 +114,7 @@ export const Userdashboard = () => {
                         Completed
                       </p>
                     </div>
+                   
                   </div>
                   <div className="col">
                     <div className="data">
@@ -120,18 +127,22 @@ export const Userdashboard = () => {
                         </>
                       )}
                     </div>
+                    <hr />
                     <div className="data">
                       <p>Total current tax</p>
                       <p>250,000</p>
                     </div>
+                    <hr />
                     <div className="data">
                       <p>Tax remainder</p>
                       <p>0 balance</p>
                     </div>
+                    <hr />
                     <div className="data">
                       <p>Transaction date</p>
                       <p>23 / 11 / 2026</p>
                     </div>
+                    <hr />
                     <div className="data">
                       <p>Duration</p>
                       <p>6 months</p>

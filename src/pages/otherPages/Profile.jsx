@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import profileImage from "./img/manwater.png";
+import profileImage from "./img/people3.jpg";
 
 // IMPORT LOADER
 import { Loader } from "../uiComponent/Loader";
@@ -45,6 +45,8 @@ export const Profile = () => {
     setDeleting(true);
 
     setConfirm(deleteButton.current.id);
+
+    
   };
   // ==========
   const suspendAccount = () => {
@@ -66,6 +68,7 @@ export const Profile = () => {
   // CONFIRM BUTTON
   const confirmButton = () => {
     setHandleAction(true);
+    deleteAccount()
   };
 
   // CANCEL EDIT BUTTON
@@ -94,17 +97,38 @@ export const Profile = () => {
 
         const userInfor = response.data.userData;
 
+         localStorage.setItem("userId", response.data.userData._id)
+
+      //   if (deleteuser.status === 404) {
+      //    currentPage = window.location.pathname();
+      //    window.location.reload(currentPage);
+      //    window.location.replace("/auth-login")
+      // }
+        
+
         setFetchUserData(userInfor);
       } catch (err) {
-        if (err.response.data.success === false) {
-          window.location.replace("/auth-login");
-        }
+        // if (err.response.success === false) {
+        //   window.location.replace("/auth-login");
+        // }
       } finally {
         setLoading(false);
       }
     };
     fetchdata();
   }, []);
+
+  const deleteAccount = async () => {
+    try {
+     const deleteuser =  await auth.delete(`/delete-user/${localStorage.getItem("userId")}`);
+
+      
+     
+    }  catch (err) {
+      console.log(err.response)
+    }
+    
+  }
 
   return (
     <>
@@ -129,9 +153,8 @@ export const Profile = () => {
                       <p>...</p>
                     ) : (
                       <>
-                        <span>{fetchUserData?.firstname}</span>
-                        &nbsp;
-                        <span>{fetchUserData?.lastname}</span>
+                        <span>{fetchUserData?.firstname} {fetchUserData?.lastname}</span>
+                        
                       </>
                     )}
                   </div>

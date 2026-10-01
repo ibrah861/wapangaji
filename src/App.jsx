@@ -11,6 +11,7 @@ import { Login } from "./pages/auth/Login";
 import { Userdashboard } from "./pages/otherPages/Userdashboard";
 import { Navigation } from "./pages/nav/navigation";
 import { Profile } from "./pages/otherPages/Profile";
+import { Adminregister } from "./pages/otherPages/img/Admin-register";
 // --------------------------------------
 
 // css Links
@@ -24,7 +25,7 @@ import "./pages/uiComponent/loader_style/Loader.css";
 
 export const App = () => {
 
-  const handleNav = window.location.pathname !== "/"
+  const handleNav = window.location.pathname !== "/auth-login"
  
   return (
     <>
@@ -36,6 +37,7 @@ export const App = () => {
         <Route path="/" element={<Login />} />
         <Route path="/user-profile" element={<Profile />} />
         <Route path="/user-dashboard" element={<Userdashboard />} />
+        <Route path="/admin-register" element={<Adminregister />} />
       </Routes>
     </>
   );

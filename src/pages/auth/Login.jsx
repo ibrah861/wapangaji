@@ -10,7 +10,7 @@ import facebook from "./img/facebook.png";
 import { auth } from "../axios/Axios";
 
 // SWEET ALERT
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 
 export const Login = () => {
   const [response, setResponse] = useState({
@@ -53,6 +53,23 @@ export const Login = () => {
       text: "Invalid credential, please insure you write correct email_address and password  ",
     });
   };
+  const emptyfieldMessage = () => {
+    Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 5000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      },
+    }).fire({
+      icon: "error",
+      title : "Error",
+      text: "Status code 400, all field shoud not be empty",
+    });
+  };
 
   // ---------------
 
@@ -66,6 +83,8 @@ export const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    let ax  = false
 
     if (ax) {
       Swal.mixin({
@@ -98,9 +117,16 @@ export const Login = () => {
       const accessToken = handlePost.data.jwt_access_user_token;
       localStorage.setItem("authToken", accessToken);
     } catch (err) {
+
       if (err.response.status === 401) {
-        // errorMessage();
+         errorMessage();
       }
+
+      if (err.response.status === 400) {
+         emptyfieldMessage();
+      }
+
+      console.log(err.response)
     } finally {
       ax = false;
     }
@@ -127,6 +153,7 @@ export const Login = () => {
                 </label>
                 <input
                   type="email"
+                  required
                   placeholder="email"
                   name="email"
                   onChange={handleChange}
@@ -138,7 +165,8 @@ export const Login = () => {
                 </label>
                 <input
                   type="password"
-                  placeholder="PASSWORD"
+                  required
+                  placeholder="password"
                   name="password"
                   onChange={handleChange}
                 />
