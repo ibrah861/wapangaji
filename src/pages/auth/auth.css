@@ -1,133 +1,131 @@
-.login-page {
-  height: 100dvh;
+.content-Wrapper {
+  position: relative;
+  min-height: inherit;
 }
 
-.wrapper-container {
-  height: inherit;
-}
+.spiner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-.form-container {
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: inherit;
+  row-gap: 2rem;
+  color: white;
 }
 
-.lg-form {
-  background: var(--white-bg-cl);
-  box-shadow: 0px 0px 1px black;
-  color: black;
-  width: 22rem;
-  padding: var(--padding-form) 1.5rem;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
+  position: relative;
 }
 
-.lg-form h2 {
-  font-weight: 800;
-  margin-bottom: 0.9em;
+.login_container {
+  background: var(--secondary-background-color);
+  padding: var(--box-container-padding);
+  box-shadow: none;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.login_container_form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: var(--flex-raw-gap);
+}
+
+.form_h1 {
   text-align: center;
+  margin: 0.5rem 0 1rem 0;
 }
 
-.input_label {
+.form_description > p {
+  color: blue !important;
+  font-weight:300;
+}
+
+.form_contents > .margin--top--bottom {
+  margin: 1rem 0;
+}
+
+.inputs--label--flex {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
-  margin-top: 1rem;
 }
 
-.username,
-.password {
-  display: flex;
-  flex-direction: column;
+.child-margin > label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-.username > input,
-.password > input {
-  padding: 0.8rem 0;
-  margin-top: 0.3rem;
-  box-shadow: 0px 0px 1px black;
+.inputs--label--flex > input {
+  padding: 0.7rem;
+  font-family: inherit !important;
+}
+
+.form_btn {
+  padding: 0.6rem 0;
   border: none;
+  border-radius: 5px;
 }
 
-.username > input::placeholder,
-.password > input::placeholder {
-  padding-left: 0.5rem;
-}
-
-.username > input,
-.password > input{
-  padding-left: 0.9rem;
-}
-
-
-
-.text-discription,
-.messege-of-contact {
-  box-shadow: 0px 0px 4px black;
-  padding: 0.8rem;
-  border-radius: 0.3rem;
-  margin-top: 0.4rem;
-  color: white;
-  font-size: small;
-  background: rgba(0, 110, 0, 0.882);
-}
-
-.text-discription > p {
-  line-height: 1.6rem;
-}
-
-.submit-credential {
+.blue_btn {
   background: blue;
-  border-radius: 0.3rem;
-  margin-top: 1rem;
-}
-
-label {
-  font-weight: 100;
-}
-
-.submit-credential > button {
-  background: transparent;
-  box-shadow: 0px 0px 0px;
   color: white;
-  letter-spacing: 0.1em;
-  font-weight: bold;
-  border: none;
-  padding: 0.8rem 0;
-  cursor: pointer;
+  font-family: inherit;
 }
 
-.messege-of-contact {
-  line-height: 1.6rem;
-}
-
-.contact-admin {
-  background: white;
-  color: black;
-  box-shadow: 0px 0px 1px black;
-  width: 22rem;
-  padding: var(--padding-form) 1.5rem;
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-  display: flex;
-  column-gap: 0.8em;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.item-contact {
+.form_image_container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  img {
-    width: 100%;
-    max-width: 2rem;
+}
+
+.contents_assist_message {
+  color: red;
+}
+
+.form_check_btn {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+
+.login_contents_text {
+  background: linear-gradient( to top right, blue, black);
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+
+  span {
+    display: block;
+    font-weight: 900;
   }
 
   p {
-    font-size: 0.7rem;
-    margin-top: 0.5em;
-    text-align: center;
+    color: white !important;
+    padding: 0.5rem 0;
+  }
+}
+
+/* MEDIA QUERY  */
+@media (width > 28.125rem) {
+  .login_container {
+    max-width: 24rem;
+      box-shadow: 0px 0px 2px black;
+  width: 95%;
   }
 }

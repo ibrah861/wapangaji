@@ -1,0 +1,149 @@
+.page_wrapper {
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.flex_wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 0;
+}
+
+.section_one {
+  background: white;
+}
+
+.title_h1_section_one {
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.flex_container_section_one {
+  width: 100%;
+}
+
+.flex_container_section_one_img {
+  width: 100%;
+
+  display: block;
+  overflow: hidden;
+
+  img {
+    width: 300px;
+    height: 250px;
+  }
+}
+
+.section_description > p {
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.take_action_button {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.take_action_button > a button  {
+  border: none;
+  padding: 0.9rem 4rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  color: white;
+  width: inherit;
+  background: orangered;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.section_two {
+  margin-top: 4rem;
+
+  h2 {
+    font-weight: 700;
+    text-align: center;
+    font-size: 2.6rem;
+    color: white;
+  }
+}
+
+.section_two_container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+    column-gap: 2rem;
+}
+
+.flex-section_two {
+    background: black;
+    color: white;
+    border-radius: 8px;
+    padding: 4rem;
+}
+
+.section_two_col_one ul > li, .section_two_col_two ul > li {
+   margin-top: 2rem;
+    line-height: 2rem;
+    list-style-type: none;
+
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1rem;
+}
+
+/* ----------------------------------- */
+
+@media (width > 450px) {
+  .page_wrapper {
+    width: 80%;
+  }
+
+  .title_h1_section_one {
+    font-weight: 900;
+    font-size: 3.6rem;
+    font-weight: 900;
+  }
+  .flex_wrapper {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .flex_container_section_one {
+    width: 50%;
+  }
+
+  .flex_container_section_one_img {
+    width: 60%;
+    height: 26rem;
+    flex-grow: 2;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 450px;
+      height: 400px;
+    }
+  }
+
+  .title_h1_section_one {
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .take_action_button > button {
+    width: fit-content;
+  }
+}

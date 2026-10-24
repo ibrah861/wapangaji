@@ -5,8 +5,6 @@ import { Loader} from '../../uiComponent/Loader'
 export const Adminregister = () => {
 
 
-
-
   return (
     <div className='dashbord register'>
       <h2>USER REGISTRATION SECTION</h2>

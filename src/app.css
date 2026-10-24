@@ -1,69 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  /* BACK GROUND */
+  --primary-background-color:rgba(0, 0, 0, 0.764);
+  --secondary-background-color:hsl(0, 0%, 100%);
 
+  /* COLOR */
+  --h1-color:white;
+  --h2-color:white;
+  --p-color:white;
 
-*,
-*::before,
-*::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  /* UNIT */
+  --mobile-font-size : 0.9rem;
+  --box-container-padding : 1rem;
+  --flex-raw-gap: 1rem;
+
+  /* Media query for Large Screen */
+  --laptop_width : 1rem;
+  --laptop_font-size: 1.0rem; 
 }
 
 html {
-  width: 100%;
-  max-width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-size: calc(1.1 * var(--mobile-font-size));
+   font-family: "Nunito", sans-serif;
+  background-color: var(--primary-background-color);
+ min-height: 92dvh;
+ width: 100%;
 }
 
 body {
+  width: inherit;
+  min-height: inherit;
   position: relative;
-  width: inherit;
-  width: inherit;
-  background: rgba(245, 245, 245, 0.319);
- 
 }
 
 #root {
-  width: inherit;
-  max-width: inherit;
-  
+  width: 100%;
+  min-height: inherit;
 }
 
-.wrapper-container {
-  margin: 0 auto;
-  width: 65%;
-  position: relative;
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
 }
 
-.dashbord {
-  position: relative;
-  width: 85%;
-  margin: 4.9rem auto 0 auto;
-  max-width: 100%;
-  overflow: hidden;
+* input {
+  color: black;
 }
 
-label {
-  color:rgba(0, 0, 0, 0.784) ;
-  font-weight: 700;
+h1 {
+  color: var( --h1-color);
 }
 
-@media (width < 450px) {
-  .mobile-view-wrapper {
-    margin: 0 auto;
-    width: 100%;
-    padding: 0.1rem 0.7em 1rem 0.7em;
+h2 {
+  color : var(--h2-color)
+}
+
+p {
+  color: var(--p-color);
+}
+
+
+/* MEDIA QUERY  */
+@media (width > 28.125rem) {
+  html {
+    font-size: calc(1 * var( --laptop_font-size));
   }
-}
 
-:root {
-  --green-cl-1: white;
-  --green-cl-2: green;
-  --green-cl-3: green;
-  --white-bg-cl: white;
-
-  /* ------UNIT-------- */
-  --padding-form: 2rem;
-  --border-radius: 0.6rem;
+  h1 {
+    font-weight: 900;
+  }
 }
