@@ -230,7 +230,7 @@ export const Login = () => {
             )}
           </form>
           <br />
-          <Link to="/landpage">Go Back to Land page</Link>
+          <Link to="/">Go Back to Land page</Link>
         </div>
       </div>
 
