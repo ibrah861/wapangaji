@@ -5,10 +5,7 @@
   --primary-background-color:rgba(0, 0, 0, 0.764);
   --secondary-background-color:hsl(0, 0%, 100%);
 
-  /* COLOR */
-  --h1-color:white;
-  --h2-color:white;
-  --p-color:white;
+
 
   /* UNIT */
   --mobile-font-size : 0.9rem;
@@ -43,24 +40,13 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  color: white;
+ 
 }
 
 * input {
   color: black;
 }
 
-h1 {
-  color: var( --h1-color);
-}
-
-h2 {
-  color : var(--h2-color)
-}
-
-p {
-  color: var(--p-color);
-}
 
 
 /* MEDIA QUERY  */
