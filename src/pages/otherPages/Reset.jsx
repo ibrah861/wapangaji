@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import  { useState } from "react";
+
+
+
 
 export const Reset = () => {
-    const [oldPassword, setOldPassword] = useState("");
+    const [ setOldPassword] = useState("");
     const [newPassword, setNewPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [checkBox, setCheckBox] = useState(false);
@@ -54,6 +57,8 @@ export const Reset = () => {
           </div>
 
           <button className="blue_btn form_btn btn--margin--top">Change password</button>
+
+          <button_/>
         </form>
       </div>
     </div>

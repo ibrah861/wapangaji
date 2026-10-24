@@ -23,7 +23,7 @@ export const Payment_fill = () => {
         <label htmlFor="search">Search user payment : </label>
         <div className="choose_typ">
           <div className="type">
-            <input type="radio" id="radio" />
+            <input type="radio" />
             <label htmlFor="">Mobile phone</label>
           </div>
           <div className="type">

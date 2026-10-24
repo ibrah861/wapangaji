@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
     element: <Reset />,
   },
   {
-    path: "/landpage",
+    path: "/",
     element: <LandPage />,
   },
 
